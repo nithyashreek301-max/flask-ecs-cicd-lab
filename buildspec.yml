@@ -4,7 +4,7 @@ version: 0.2
 env:
   variables:
     AWS_REGION: ap-south-1
-    AWS_ACCOUNT_ID: nithyashreek301-max        # REPLACE THIS
+    AWS_ACCOUNT_ID: 971089639220        # REPLACE THIS
     ECR_REPO_NAME: flask-ecs-cicd-lab
     ECS_CLUSTER: flask-ecs-cluster
     ECS_SERVICE: flask-app-service
