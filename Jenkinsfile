@@ -3,7 +3,7 @@ pipeline {
 
     environment {
         AWS_REGION        = 'ap-south-1'
-        AWS_ACCOUNT_ID    = '<YOUR_AWS_ACCOUNT_ID>'        // REPLACE THIS
+        AWS_ACCOUNT_ID    = '971089639220'        // REPLACE THIS
         ECR_REPO          = "${AWS_ACCOUNT_ID}.dkr.ecr.${AWS_REGION}.amazonaws.com/flask-ecs-cicd-lab"
         ECS_CLUSTER       = 'flask-ecs-cluster'
         ECS_SERVICE       = 'flask-app-service'
@@ -15,7 +15,7 @@ pipeline {
         stage('Checkout') {
             steps {
                 git branch: 'main',
-                    url: 'https://github.com/<YOUR_GITHUB_USERNAME>/flask-ecs-cicd-lab.git',  // REPLACE THIS
+                    url: 'https://github.com/nithyashreek301-max/flask-ecs-cicd-lab.git',  // REPLACE THIS
                     credentialsId: 'github-token'
             }
         }
