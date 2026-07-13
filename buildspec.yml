@@ -36,7 +36,7 @@ phases:
       - docker build -t ${ECR_REPO}:${IMAGE_TAG} .
       - docker tag ${ECR_REPO}:${IMAGE_TAG} ${ECR_REPO}:latest
       - echo Running Trivy vulnerability scan...
-      - - trivy image --severity HIGH,CRITICAL --no-progress ${ECR_REPO}:${IMAGE_TAG}
+      - trivy image --severity HIGH,CRITICAL --no-progress ${ECR_REPO}:${IMAGE_TAG}
       - echo Pushing images to ECR...
       - docker push ${ECR_REPO}:${IMAGE_TAG}
       - docker push ${ECR_REPO}:latest
